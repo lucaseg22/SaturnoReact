@@ -1,0 +1,17 @@
+
+.navb {
+    background-color: palevioletred;
+}
+
+.titulo, .boton {
+    color: black;
+}
+
+.boton {
+  color: black !important;
+}
+
+  .logo { 
+    height: 10rem;
+    width: 15rem;
+  }
