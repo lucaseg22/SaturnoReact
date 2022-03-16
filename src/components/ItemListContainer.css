@@ -1,0 +1,9 @@
+.itemContainer {
+    display: flex;
+    height: 80vh;
+    width: 100%;
+}
+
+h1 {
+    margin-left: 45%;
+}

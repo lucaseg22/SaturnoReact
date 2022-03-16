@@ -1,0 +1,11 @@
+    button {
+        background-color: transparent;
+        border: none;
+        margin: .2rem;
+        padding: .5rem;
+        border-radius: 5px;
+    }
+    
+    button:hover{
+        background-color: rgba(70, 70, 70, 0.123);
+    }

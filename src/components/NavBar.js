@@ -6,7 +6,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-
+import CartWidget from './CartWidget';
 
 
 export default function NavBar() {
@@ -27,6 +27,7 @@ export default function NavBar() {
           <Button color='inherit' className='boton'>Productos</Button>
           <Button color='inherit' className='boton'>Nosotros</Button>
           <Button color='inherit' className='boton'>Contacto</Button>
+          <CartWidget />
         </Toolbar>
       </AppBar>
     </Box>
