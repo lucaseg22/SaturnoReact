@@ -5,7 +5,7 @@ export default function CartWidget() {
     return (
     <div>
         <button>
-            <p>CARRITO</p>
+            <img src='./Cart.png' />
         </button>
     </div>    
     )
