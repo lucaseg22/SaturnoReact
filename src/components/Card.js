@@ -1,9 +1,10 @@
-import react  from "react";
-import Counter from './Counter'
-import './Card.css'
 
-export default function Card(products) {
-    const {title, price, stock} = products
+import Button from '@mui/material/Button';
+import Counter from './Counter'
+import './styles/Card.css'
+
+export default function Card({data}) {
+    const {id, title, price, stock} = data
     return(
         <div className="card">
             <h1 className="titulo">
@@ -12,7 +13,8 @@ export default function Card(products) {
             <img src="#" />
             <p>Precio: {price} </p>
             <p>Stock: {stock} </p>
-            <Counter stock="5" />
+            <Button className="details" > Ver detalles </Button>
+            <Counter stock={stock} />
 
         </div>
     )

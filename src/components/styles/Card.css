@@ -4,6 +4,8 @@
     border: 2px solid black;
     background-color: rgba(16, 245, 138, 0.445);
     margin: 2rem;
+    display: inline-block;
+    flex-wrap: wrap;
 }
 
 .titulo {
@@ -17,7 +19,12 @@ img {
     margin-top: 10px;
 }
 
+Button.details {
+    margin-top: 4rem;
+    color: black;
+    font-size: 10px;
+}
 .counter {
 display: block;
-margin-top: 16rem;
+margin-top: 1rem;
 }

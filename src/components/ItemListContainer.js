@@ -1,9 +1,10 @@
-import './ItemListContainer.css'
-import Card from './Card'
+import './styles/ItemListContainer.css'
+import ItemList from './ItemList'
+
 export default function ItemListContainer(greeting) {
     return (
-        <div class="itemContainer">
-            <Card title="Palta" price="800" stock="5" />
+        <div className="itemContainer">
+           <ItemList />
         </div>
     )
 }

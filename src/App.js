@@ -6,8 +6,8 @@ function App() {
   return (
     <div className="App">
       
-        <NavBar color='secondary'/>
-        
+        <NavBar color='secondary'/> <br />
+
         <ItemListContainer>
         
         </ItemListContainer>

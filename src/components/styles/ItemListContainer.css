@@ -1,6 +1,6 @@
 .itemContainer {
-    display: flex;
-    height: 80vh;
+    display: inline-flexbox;
+    height: max-content;
     width: 100%;
 }
 

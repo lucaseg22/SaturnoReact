@@ -1,4 +1,4 @@
-import './CartWidget.css';
+import './styles/CartWidget.css';
 import Button from '@mui/material/Button';
 
 export default function CartWidget() {

@@ -11,6 +11,62 @@ body {
 .App {
   text-align: center;
 }
+.borde{
+  height:20rem;
+  width: 50rem;
+  border: 1px solid black;
+  background-color: rgb(178, 65, 201);
+  display: block;
+  margin: auto;
+  border-radius: 10%;
+}
+
+    .circulo:hover {
+    /* translate: 500px;
+    transition: 2s; */
+    animation-name: slidein;
+    animation-duration: 5s;
+  }
+
+  @keyframes ancho {
+    0% { width:15rem; translate: 100px;}
+    0% { width:20rem; translate: 200px;}
+    50% { width: 25rem; translate: 300px;}
+    50% { width: 2rem; translate: 400px;}
+    100% { width: 15rem; translate: 500px;}
+  }
+  @keyframes slidein {
+    25% {
+      width: 20rem;
+      translate: 150px;
+    }
+    
+    50% {
+      width: 25rem;
+      translate: 250px;
+    }
+    75% {
+      width: 20rem;
+      translate:400px;
+    }
+    100% {
+      width: 15rem;
+      translate: 500px;
+    }
+  }
+  
+
+.circulo {
+  border: 1px solid rgba(90, 87, 87, 0.781);
+  box-shadow: 1px 1px 1px gray;
+  background-color: rgb(223, 215, 215);
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  margin-top: 5%;
+  margin-left: 2%;
+}
+
 
 
 @media (prefers-reduced-motion: no-preference) {
@@ -34,11 +90,11 @@ body {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes circulo {
   from {
-    transform: rotate(0deg);
+    transform: scale(100px);
   }
   to {
-    transform: rotate(360deg);
+    transform: scale(200px);
   }
 }

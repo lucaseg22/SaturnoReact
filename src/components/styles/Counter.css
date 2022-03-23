@@ -1,6 +1,6 @@
 .counterbtn {
     height: 3.5vh;
-    width: 2px;
+    width: 10px !important;
     background-color: white;
 } 
 input {
@@ -18,3 +18,4 @@ input {
     display: block;
     margin: auto;
 }
+
