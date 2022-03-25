@@ -20,7 +20,7 @@ export default function NavBar() {
             
           </IconButton>
           
-          <Typography className='titulo' variant="h3" component="div" sx={{ flexGrow: 1 }}>
+          <Typography className='titulo' variant="h4" component="div" sx={{ flexGrow: 1 }}>
             Saturno Ceramica
           </Typography>
           <Button color='inherit' className='boton'>Inicio</Button>

@@ -1,4 +1,4 @@
-export const productsdb = [
+export const productsDb = [
     {
         id: 1,  
         title:"Palta",

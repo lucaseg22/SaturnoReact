@@ -6,6 +6,9 @@
     margin: 2rem;
     display: inline-block;
     flex-wrap: wrap;
+    min-width: 15vw;
+    min-height: 50vh;
+    
 }
 
 .titulo {
@@ -27,4 +30,11 @@ Button.details {
 .counter {
 display: block;
 margin-top: 1rem;
+}
+
+.bottomInfo {
+    position: relative;
+    display: block;
+    margin-top: 40%;
+    
 }

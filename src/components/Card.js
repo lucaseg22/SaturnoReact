@@ -11,10 +11,12 @@ export default function Card({data}) {
                 {title}
             </h1>
             <img src="#" />
-            <p>Precio: {price} </p>
-            <p>Stock: {stock} </p>
-            <Button className="details" > Ver detalles </Button>
-            <Counter stock={stock} />
+            <div className='bottomInfo'>
+                <p>Precio: {price} </p>
+                <p>Stock: {stock} </p>
+                <Button className="details" > Ver detalles </Button>
+                <Counter stock={stock} />
+            </div>
 
         </div>
     )

@@ -31,7 +31,7 @@ export default function Counter(products) {
             <Stack spacing={1} direction="row">
                 <div className="stack">
                     <Button onClick={subProduct} className='counterbtn' variant="contained" >-</Button>
-                    <input type="text" value={qty} />
+                    <input type="text"defaultValue={qty} />
                     <Button onClick={addProduct} className='counterbtn' variant="contained" >+</Button>
                     <Button onClick={message} className='addCart' variant="contained" size="medium"> Agregar al carrito </Button>
                 </div> 

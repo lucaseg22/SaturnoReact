@@ -1,24 +1,9 @@
-import React, {useState, useEffect} from "react"
+import React from "react"
 import Card from './Card'
-import { productsdb } from "../Item"
 
-export default function ItemList() {
 
-   const [products, setProducts] = useState([])
 
-   const getProducts = () => {
-      return new Promise((resolve, reject) => {
-      setTimeout(() => {
-         return resolve(productsdb)
-      },2000);
-   })
-   }
-
-   useEffect( () => {
-    getProducts().then((products) => {
-         setProducts(products)
-         console.log("SOLO MONTAJE")})
-   }  , [])
+export default function ItemList({products}) {
 
    return (
       <div className="container">
