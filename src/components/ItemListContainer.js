@@ -5,7 +5,7 @@ import React, {useState, useEffect} from 'react'
 
 export default function ItemListContainer(greeting) {
     const [products, setProducts] = useState([])
-
+   
     const getProducts = () => {
        return new Promise((resolve, reject) => {
        setTimeout(() => {

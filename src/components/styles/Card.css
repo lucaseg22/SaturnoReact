@@ -23,18 +23,23 @@ img {
 }
 
 Button.details {
-    margin-top: 4rem;
+    margin-top: .5rem;
     color: black;
     font-size: 10px;
 }
 .counter {
 display: block;
-margin-top: 1rem;
+margin-top: .2rem;
 }
 
 .bottomInfo {
     position: relative;
     display: block;
-    margin-top: 40%;
+    margin-top: 2px;
     
+}
+
+img.cardImg {
+    height: 10rem;
+    width: 10rem;
 }

@@ -19,3 +19,18 @@ input {
     margin: auto;
 }
 
+
+p.contador{
+    display: inline-block;
+    width: 2rem;
+    height: 1.5rem;
+    background-color: white;
+    border: 1px solid black;
+    margin: 4px;
+    box-shadow: -1px -1px 2px black;
+    font-weight: 500;
+}
+
+Button.addCart {
+    margin-top: .5rem;
+}

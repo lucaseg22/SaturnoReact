@@ -1,0 +1,13 @@
+.detalle {
+    margin: 1rem;
+    display: inline-block;
+    border: 1px solid black;
+    padding: .5rem;
+    background-color: bisque;
+    font-weight: bold;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}

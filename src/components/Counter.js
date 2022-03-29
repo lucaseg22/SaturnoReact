@@ -3,9 +3,6 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import './styles/Counter.css'
 
-
-
-
 export default function Counter(products) {
     const [qty, setQty] = useState(1)
    
@@ -21,17 +18,16 @@ export default function Counter(products) {
     }
 
     const message = () => {
-        alert(`Se agregaron ${qty} productos`)
+        alert(`Se agregaron ${qty} producto/s`)
         setQty(1)
     }
 
     return( 
         <div className="counter">
-
-            <Stack spacing={1} direction="row">
+            <Stack direction="row">
                 <div className="stack">
                     <Button onClick={subProduct} className='counterbtn' variant="contained" >-</Button>
-                    <input type="text"defaultValue={qty} />
+                    <p className="contador"> {qty}</p>
                     <Button onClick={addProduct} className='counterbtn' variant="contained" >+</Button>
                     <Button onClick={message} className='addCart' variant="contained" size="medium"> Agregar al carrito </Button>
                 </div> 
