@@ -1,0 +1,18 @@
+.catContainer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly   ;
+}
+
+.catContainer a img {
+    border: 1px solid black;
+    border-radius: 0;
+    height: 70vh;
+    width: 32vw;
+    display: inline-block;
+    text-decoration: none;
+}
+
+h1 {
+    margin: 0;
+}

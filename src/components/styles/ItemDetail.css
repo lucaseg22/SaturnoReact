@@ -1,13 +1,11 @@
-.detalle {
-    margin: 1rem;
-    display: inline-block;
-    border: 1px solid black;
-    padding: .5rem;
-    background-color: bisque;
-    font-weight: bold;
+.container {
+    display: flex;
+    height: max-content;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-img {
-    height: 50px;
-    width: 50px;
+Card {
+    display: inline-block;
 }

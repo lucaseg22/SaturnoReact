@@ -1,11 +1,11 @@
-import './styles/CartWidget.css';
+import '../styles/CartWidget.css';
 
 
 export default function CartWidget() {
     return (
     <div>
         <button>
-            <img src='./Cart.png' />
+            <img src='img/Cart.png' />
         </button>
     </div>    
     )

@@ -1,7 +1,7 @@
 
 .navb {
     background-color: rgb(226, 123, 158);
-    height: 15vh;
+    height: 18vh;
 }
 
 .titulo {
@@ -9,14 +9,16 @@
     
 }
 
-.boton {
+.boton a {
   color: black !important;
   font-weight: bold !important;
   margin-left:.5rem !important;
+  text-decoration: none !important;
 }
 
-  .logo { 
-    height: 15vh;
-    width: 18vh;
-    margin-left: 4rem;
-  }
+.logo { 
+  height: 15vh;
+  width: 18vh;
+  padding: 0.1rem;
+}
+

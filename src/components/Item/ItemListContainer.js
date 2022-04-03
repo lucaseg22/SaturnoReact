@@ -1,6 +1,6 @@
-import './styles/ItemListContainer.css'
+import '../styles/ItemListContainer.css'
 import ItemList from './ItemList'
-import { productsDb } from "../helpers/productsDb"
+import { productsDb } from "../../helpers/productsDb"
 import React, {useState, useEffect} from 'react'
 
 export default function ItemListContainer(greeting) {
@@ -9,12 +9,12 @@ export default function ItemListContainer(greeting) {
     const getProducts = () => {
        return new Promise((resolve, reject) => {
        setTimeout(() => {
-          return resolve(productsDb)
+          return (resolve(productsDb))
        },2000);
     })
     }
  
-    useEffect( () => {
+    useEffect(() => {
      getProducts().then((products) => {
           setProducts(products)
           })

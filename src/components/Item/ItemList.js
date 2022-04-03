@@ -10,7 +10,7 @@ export default function ItemList({products}) {
       {products.map((product) =>{
          const {id} = product
          return (<Card data={product} key={id} />)
-      })} 
+      })}
       </div>
     )
    }

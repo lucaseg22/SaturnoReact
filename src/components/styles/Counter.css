@@ -1,7 +1,17 @@
-.counterbtn {
-    height: 3.5vh;
-    width: 10px !important;
-    background-color: white;
+.counterbtnm {
+    height: 3.5vh !important;
+    background-color:rgb(236, 118, 227) !important;
+    color: black!important;
+    margin-left: .9rem !important;
+    border: 1px solid rgb(175, 47, 165) !important;
+}
+
+.counterbtnme {
+    height: 3.5vh !important;
+    background-color: rgb(236, 118, 227) !important;
+    color: black !important;
+    margin-right: .9rem !important;
+    border: 1px solid rgb(175, 47, 165) !important;
 } 
 input {
     height: 3.5vh;
@@ -27,10 +37,15 @@ p.contador{
     background-color: white;
     border: 1px solid black;
     margin: 4px;
+    text-align: center;
     box-shadow: -1px -1px 2px black;
     font-weight: 500;
 }
 
 Button.addCart {
-    margin-top: .5rem;
+    display: block;
+    margin-top: .2rem;
+    color: black !important;
+    background-color: rgb(236, 118, 227) !important;
+    border: 1px solid rgb(175, 47, 165) !important;
 }
