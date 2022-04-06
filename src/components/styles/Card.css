@@ -8,12 +8,13 @@
     margin: 2rem;
     display: inline-block;
     flex-wrap: wrap;
-    min-width: 15vw;
-    min-height: 50vh;   
+    min-width: 20vw;
+    min-height: 65vh;   
+
 }
 
 .card:hover {
-    height: 65.5vh;
+    height: 66vh;
     width: 20.5vw;
     transition: 1s;
     box-shadow: 4px 5px 10px black;

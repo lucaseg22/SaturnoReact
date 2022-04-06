@@ -1,31 +1,33 @@
 import {useState, useEffect} from "react";
-import { productsDb } from "../../helpers/productsDb"
 import ItemDetail from './ItemDetail'
+import getDetails from'../../helpers/getDetails'
+import { useParams } from "react-router-dom"
 
 export default function ItemDetailContainer () {
+const [ product, setProduct ] = useState({})
+const { id } = useParams()
+const { category } = useParams()
 
-const [ products, setProducts ] = useState([])
-
-const  getDetails = () => {
-    return new Promise((resolve, reject) =>{
-        setTimeout(() =>{
-            return (resolve(productsDb))
-        },2000);
-    })  
+const searchProductById = (array, id) => {
+    return array.map((prod) =>{
+        if (prod.id === id && prod.category === category) {
+            return setProduct(prod)
+        }
+    })
 }
 
-    useEffect(() => {
-       getDetails().then((products) => {
-           setProducts(products)
-          })
-    } , []);
- 
+useEffect(() => {
+    getDetails().then((product) => {
+        searchProductById(product, id)
+        })
+ } , [id]);
 
-        
 return(
     <div>
-        <ItemDetail products={products} />
+        
+        <ItemDetail product={product} />
     </div>
 )
+
 }
 

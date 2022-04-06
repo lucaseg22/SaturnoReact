@@ -4,7 +4,7 @@ export const productsDb = [
         title:"Palta",
         price: 800,
         stock: 10,
-        img: 'img/Palta1.jpeg',
+        img: '/img/Palta1.jpeg',
         details:'Taza linea palta 400cc',
         category: 'Tazas'
     },
@@ -13,7 +13,7 @@ export const productsDb = [
         title:"Lemon",
         price: 500,
         stock: 8,
-        img: 'img/Exprimidorlemon.jpeg',
+        img: '/img/Exprimidorlemon.jpeg',
         details:'Exprimidor con motivo de limones',
         category: 'Exprimidores'
     },
@@ -22,7 +22,7 @@ export const productsDb = [
         title:"Bowl",
         price: 1200,
         stock: 2,
-        img: 'img/Bowl.jpeg',
+        img: '/img/Bowl.jpeg',
         details: 'Bowl ceramico perlado',
         category: 'Bowls'
     },
@@ -31,7 +31,7 @@ export const productsDb = [
         title:"Taza chorreada",
         price: 900,
         stock: 5,
-        img: 'img/Tazacho.jpeg',
+        img: '/img/Tazacho.jpeg',
         details: 'Taza efecto chorreado',
         category: 'Tazas'
     }

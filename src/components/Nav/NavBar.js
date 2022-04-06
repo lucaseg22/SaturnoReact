@@ -7,17 +7,20 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom'
-import '../styles/NavBar.css';
-
+import '../styles/NavBar.css'
+import CartContext from '../../context/CartContext'
+import {useContext} from 'react'
 
 export default function NavBar() {
+  const { cart, addCart } = useContext(CartContext)
+  addCart()
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar className='navb' >
           <IconButton>
           <Link to='/'>
-            <img className='logo' src="img/saturno.png" alt='saturnoceramica' />
+            <img className='logo' src="/img/saturno.png" alt='saturnoceramica' />
           </Link>
           </IconButton>
           

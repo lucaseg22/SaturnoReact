@@ -49,3 +49,8 @@ Button.addCart {
     background-color: rgb(236, 118, 227) !important;
     border: 1px solid rgb(175, 47, 165) !important;
 }
+
+FinishBtn {
+    display: block;
+    margin-top: .2rem;
+}

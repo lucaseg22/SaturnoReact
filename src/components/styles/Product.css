@@ -30,8 +30,8 @@
 .product__main img {
     border: 1px solid black;
     border-radius: 0;
-    height: 50vh;
-    width: 45vw;
+    height: 60vh;
+    width: 40vw;
 }
 
 .product__info {
@@ -59,7 +59,7 @@
 
 span.desc {
     display: block;
-    margin-top: 3rem;
+    margin-top: 1rem;
     margin-left: 1rem;
 }
 
@@ -72,5 +72,10 @@ span.desc {
     margin: 0;
     margin-left: 1rem;
     border: 1px solid black;
+    display: block;
 }
+
+
+
+
 
