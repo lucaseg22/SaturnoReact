@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import Counter from '../Item/Counter'
+import Counter from './Counter'
 import FinishBtn from './FinishBtn'
-import '../styles/Product.css'
+import '../styles/ItemDetail.css'
 
 export default function ItemDetail ({product}) {
 const [ visible, setVisible ] = useState(false)

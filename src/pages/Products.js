@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom'
-import { useState, useEffect, useContext } from 'react'
+import { useState, useEffect } from 'react'
 import getDetails from '../helpers/getDetails'
 import Card from '../components/Item/Card'
-import '../components/styles/ItemDetail.css'
+import '../components/styles/Product.css'
 
 
 const Product = () =>{
