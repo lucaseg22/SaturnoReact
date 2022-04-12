@@ -7,3 +7,15 @@
 h1 {
     margin-left: 45%;
 }
+
+.loaderContainer {
+    display: flex;
+    height: 80vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    font-size: 50px;
+}

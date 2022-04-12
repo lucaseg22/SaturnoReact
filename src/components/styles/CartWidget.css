@@ -1,17 +1,21 @@
-    button {
-        background-color: transparent;
-        border: none;
-        margin: .2rem;
-        padding: .5rem;
-        border-radius: 5px;
-    }
-    
-    button:hover{
-        background-color: rgba(70, 70, 70, 0.123);
-        cursor: pointer;
-    }
 
-    img {
+img.cwImg {
         height: 1.5rem;
         width: 1.5rem;
     }
+
+button .MuiAvatar-root {
+        background-color: transparent;
+    }
+
+.cartProductImg {
+    margin: 0;
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 25%;
+}
+
+.price {
+    margin-left: 10px;
+}

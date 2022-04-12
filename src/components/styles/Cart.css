@@ -1,0 +1,63 @@
+div h3 {
+    display: inline-block;
+    margin: 0;
+}
+.prod {
+    width: 19vw;
+}
+.desc {
+    width: 19vw;
+}
+.qty {
+    width: 19vw;
+}
+.price {
+    width: 19vw;
+}
+.total {
+    width: 19vw;
+}
+
+div.header_tags{
+    margin-top: .5rem;
+    border-bottom: 1px solid black;
+
+}
+.products_section {
+    display: inline-flex;
+    box-sizing: border-box;
+}
+.section {
+    margin: auto;
+    display: inline-block;
+    width: 19.5vw;
+    height: 35vh;
+    border-bottom: 1px solid black;
+}
+
+.section p {
+margin-top: 30%;
+}
+
+.section img{
+    border-radius: 25%;
+    height: 35vh;
+    width: 20vw;
+    padding: 5vh;
+}
+
+.totalPrice {
+    margin: .5rem;
+}
+
+.section p Button {
+    color: black;
+    background-color: rgb(255, 41, 41);
+    max-width: 2rem !important;
+    height: 3rem;
+    box-shadow: 1px 2px 4px gray;
+}
+
+.section p Button:hover {
+    background-color: rgb(206, 33, 33);
+}

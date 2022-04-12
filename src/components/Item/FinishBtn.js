@@ -5,7 +5,7 @@ import '../styles/FinishBtn.css'
 const FinishBtn = () => {
 
     return(
-        <Button class='finish'><Link to='/Cart'> Terminar compra </Link></Button>
+        <Button className='finish'><Link to='/carrito'> Terminar compra </Link></Button>
     )
 }
 

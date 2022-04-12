@@ -6,7 +6,7 @@ export const productsDb = [
         stock: 10,
         img: '/img/Palta1.jpeg',
         details:'Taza linea palta 400cc',
-        category: 'Tazas'
+        category: 'Tazas',
     },
     {
         id: '2',
@@ -15,7 +15,7 @@ export const productsDb = [
         stock: 8,
         img: '/img/Exprimidorlemon.jpeg',
         details:'Exprimidor con motivo de limones',
-        category: 'Exprimidores'
+        category: 'Exprimidores',
     },
     {
         id: '3',
@@ -24,7 +24,7 @@ export const productsDb = [
         stock: 2,
         img: '/img/Bowl.jpeg',
         details: 'Bowl ceramico perlado',
-        category: 'Bowls'
+        category: 'Bowls',
     },
     {
         id: '4',
@@ -33,6 +33,6 @@ export const productsDb = [
         stock: 5,
         img: '/img/Tazacho.jpeg',
         details: 'Taza efecto chorreado',
-        category: 'Tazas'
+        category: 'Tazas',
     }
- ];
+];

@@ -8,12 +8,11 @@ import IconButton from '@mui/material/IconButton';
 import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom'
 import '../styles/NavBar.css'
-import CartContext from '../../context/CartContext'
-import {useContext} from 'react'
+
 
 export default function NavBar() {
-  const { cart, addCart } = useContext(CartContext)
-  addCart()
+
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -28,9 +27,10 @@ export default function NavBar() {
             Saturno Ceramica
           </Typography>
           <Button color='inherit' className='boton'><Link to='/'>Inicio </Link></Button>
-          <Button color='inherit' className='boton'><Link to='/Categories'>Productos</Link></Button>
+          <Button color='inherit' className='boton'><Link to='/categorias'>Productos</Link></Button>
           <Button color='inherit' className='boton'><Link to='/'>Nosotros</Link></Button>
           <Button color='inherit' className='boton'><Link to='/'>Contacto</Link></Button>
+          <Button color='inherit' className='boton'><Link to='/carrito'>Carrito</Link></Button>
           <CartWidget />
         </Toolbar>
       </AppBar>
