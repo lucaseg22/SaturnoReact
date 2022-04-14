@@ -1,8 +1,10 @@
-import { useState, useEffect, useContext } from 'react'
+import { useState, useContext } from 'react'
 import Counter from './Counter'
 import FinishBtn from './FinishBtn'
 import CartContext from "../../context/CartContext";
+import { Button } from '@mui/material';
 import '../styles/ItemDetail.css'
+
 
 export default function ItemDetail ({product}) {
 const [ visible, setVisible ] = useState(false)
@@ -16,14 +18,9 @@ function onAdd(quant) {
     addToCart({...product, quantity: quant})
 }
 
-
-useEffect(() =>{
-    let btn = document.getElementById(`addCart${id}`)
-    btn.addEventListener('click', onAdd)
-    return () => {
-        btn.removeEventListener('click', onAdd)
-    }
-}, [product])
+const toggle = () => {
+    setVisible(false)
+}
 
 return (
         <div className='product'>
@@ -43,8 +40,11 @@ return (
                         <div className='buttons'>
                         {!visible && <Counter className='counterBox' product={product} onAdd={onAdd} stock={stock}/>}
                         
-                        {visible && ( 
-                        <FinishBtn /> 
+                        {visible && ( <div> 
+                            <FinishBtn /> 
+                        <Button onClick={() => toggle()} >Continuar comprando</Button>
+                        </div>
+                        
                                 )}
                         </div>
                 </div>

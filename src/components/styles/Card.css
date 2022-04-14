@@ -64,3 +64,14 @@ img.cardImg {
 div .counter {
     margin-top: 0;
 }
+
+button.continuar_compra.MuiButton-root {
+    background-color: orange;
+    box-shadow: 1px 1px 3px gray;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}

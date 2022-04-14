@@ -9,14 +9,15 @@ import FinishBtn from './FinishBtn';
 export default function Card({data}) {
     const [ visible, setVisible ] = useState(false)
     const {id, title, price, stock, img, category, qty} = data
-    const { cartProducts, addToCart } = useContext(CartContext)
+    const { addToCart } = useContext(CartContext)
 
-    const onAdd = (e) => {
-        e.stopPropagation()
+    function onAdd(quant) {
         setVisible(!visible)
-        addToCart(data)
+        addToCart({...data, quantity: quant})
     }
-
+    const toggle = () => {
+        setVisible(false)
+    }
     return(
         <div key= {id} className="card">
             <h1 className="titulo">
@@ -28,8 +29,10 @@ export default function Card({data}) {
                 <p>Stock: {stock} </p>
                 <Button className="details" ><Link to={`/${category}/${id}`}> Ver detalles</Link></Button>
                                         {!visible && <Counter className='counterBox' product={data} onAdd={onAdd} />}
-                        {visible && ( 
-                        <FinishBtn /> 
+                        {visible && (   <div>
+                                            <FinishBtn /> 
+                                            <Button className='continuar_compra' onClick={() => toggle()} >Continuar comprando</Button>
+                                        </div>
                                 )}
             </div>
         </div>

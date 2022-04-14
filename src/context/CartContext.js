@@ -3,12 +3,20 @@ const CartContext = createContext()
 
 const CartProvider = ({children}) => {
     const [ cartProducts, setCartProducts ] = useState([])
-    
-        const addToCart = (product) => {
-            let exists = cartProducts.find(cartProduct => cartProduct.id === product.id)
-            !exists && setCartProducts(cartProducts => [...cartProducts, product])
-            totalPrice()
-        }
+
+                const addToCart = (product) => {
+                    const exists = cartProducts.find(cartProduct => cartProduct.id === product.id)
+
+                    if (exists) { 
+                        const productInCart = cartProducts.find(cartProduct => cartProduct.id === product.id);
+                        productInCart.quantity = product.quantity + productInCart.quantity
+                        const newCart = [...cartProducts]
+                        setCartProducts(newCart)
+                    } else {
+                        setCartProducts(cartProducts => [...cartProducts, product])
+                    }
+                    totalPrice()
+                }
         
         let total = 0
 
@@ -21,7 +29,7 @@ const CartProvider = ({children}) => {
             let total = 0
             
             cartProducts.map((cartProduct) => {
-                total = cartProduct.price + total
+                total = (cartProduct.price*cartProduct.quantity) + total
             })
             return total
         }
@@ -30,9 +38,6 @@ const CartProvider = ({children}) => {
             cartProducts, total, setCartProducts, addToCart, totalPrice, deleteProduct
         }
         
-
-        
-
     return (
         <CartContext.Provider value={data} >
             {children}

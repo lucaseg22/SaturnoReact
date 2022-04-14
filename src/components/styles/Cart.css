@@ -61,3 +61,20 @@ margin-top: 30%;
 .section p Button:hover {
     background-color: rgb(206, 33, 33);
 }
+
+a.agregar_mas {
+    display: block;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(179, 113, 241);
+    height: 3rem;
+    width: 5rem;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    box-shadow: 3px 3px 3px gray;
+}
+
+a.agregar_mas:hover {
+    background-color: rgb(168, 83, 248);
+}

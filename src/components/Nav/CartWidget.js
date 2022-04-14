@@ -37,7 +37,7 @@ export default function CartWidget() {
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            <Avatar s={{ width: 32, height: 32, backgroundColor:'blue'}}><img className='cwImg' src='/img/Cart.png' /></Avatar>
+            <Avatar s={{ width: 32, height: 32, backgroundColor:'blue'}}><img className='cwImg' alt='cart' src='/img/Cart.png' /></Avatar>
           </IconButton>
         </Tooltip>
       </Box>
@@ -83,9 +83,11 @@ export default function CartWidget() {
         {cartProducts.map((cartProduct) =>{
           return(   <div key={cartProduct.id}>
                       <MenuItem>
-                        <img className='cartProductImg' src={cartProduct.img} />
+                        <img className='cartProductImg' alt={cartProduct.title}  src={cartProduct.img} />
                       <div className='title'> {cartProduct.title} </div>
                       <div className='price'> $ {cartProduct.price} </div> 
+                      <div className='qty'>  <b>{cartProduct.quantity}</b> </div> 
+                      {console.log(cartProduct.quantity)}
                       </MenuItem>
                       <Divider />
                     </div>
