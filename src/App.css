@@ -2,11 +2,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
- 
 }
 
 body {
-  background-color: pink;
+  background-color: #FFAD91;
 }
 .App {
   text-align: center;
@@ -15,14 +14,11 @@ body {
   height:20rem;
   width: 50rem;
   border: 1px solid black;
-  background-color: rgb(178, 65, 201);
+  background-color: #C36B85;
   display: block;
   margin: auto;
   border-radius: 10%;
 }
-
-
-
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

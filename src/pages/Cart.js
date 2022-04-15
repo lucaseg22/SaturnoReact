@@ -57,8 +57,8 @@ const Cart = () => {
                                             <div className='totalPrice'>
                                                 Total: $ <b>{totalPrice()}</b>
                                             </div>
-                                            <p><Button onClick={pay} size="small">Pagar</Button></p>
-                                            <p><Button onClick={clean} size="small">Limpiar carrito</Button></p>
+                                            <p><Button className='pay' onClick={pay} size="small">Pagar</Button></p>
+                                            <p><Button className='clean' onClick={clean} size="small">Limpiar carrito</Button></p>
                                         </div>
                                         )}
             

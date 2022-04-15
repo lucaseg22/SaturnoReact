@@ -48,6 +48,7 @@ margin-top: 30%;
 
 .totalPrice {
     margin: .5rem;
+    font-size: 20px;
 }
 
 .section p Button {
@@ -77,4 +78,41 @@ a.agregar_mas {
 
 a.agregar_mas:hover {
     background-color: rgb(168, 83, 248);
+}
+
+.pay.MuiButton-root{
+    background-color: rgb(112, 189, 112);
+    box-shadow: 1px 1px 4px rgb(141, 141, 141);
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid gray;
+    color: black;
+    text-decoration: none;
+}
+
+.pay.MuiButton-root:hover{
+    background-color: rgb(76, 185, 76);
+}
+
+.clean.MuiButton-root {
+    margin-top: .5rem;
+    background-color: #91f1db;
+    box-shadow: 1px 1px 4px rgb(141, 141, 141);
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid gray;
+    color: black;
+    text-decoration: none;
+}
+
+.clean.MuiButton-root:hover {
+    background-color: #69f1d2;
 }

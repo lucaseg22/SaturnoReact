@@ -1,25 +1,27 @@
 .counterbtnm {
     height: 3.5vh !important;
-    background-color: #fdbb75 !important;
+    background-color: #91f1db !important;
     color: black!important;
     margin-left: .9rem !important;
     box-shadow: 2px 2px 3px black !important;
+    border: 2px solid gray !important;
 }
 
 .counterbtnme {
     height: 3.5vh !important;
-    background-color: #fdbb75 !important;
+    background-color: #91f1db !important;
     color: black !important;
     margin-right: .9rem !important;
     box-shadow: 2px 2px 3px black !important;
+    border: 2px solid gray !important;
 } 
-
 
 Button.addCart {
     display: block;
     margin-top: .4rem;
     color: black !important;
-    background-color: #fdbb75 !important;
+    background-color: #91f1db !important;
+    border: 2px solid gray !important;
     box-shadow: 2px 2px 3px black;
 }
 

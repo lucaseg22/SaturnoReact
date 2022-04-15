@@ -4,7 +4,7 @@
     box-sizing: border-box;
     box-shadow: 2px 2px 5px 0px black;
     border-radius: 25px;
-    background-color: rgba(247, 215, 173, 0.219);
+    background-color: #f8c7b7;
     margin: 2rem;
     display: inline-block;
     flex-wrap: wrap;
@@ -66,12 +66,13 @@ div .counter {
 }
 
 button.continuar_compra.MuiButton-root {
-    background-color: rgb(248, 175, 39);
+    background-color: #91f1db;
     box-shadow: 1px 1px 4px rgb(141, 141, 141);
     color: black;
     font-weight: 600;
     font-size: 16px;
     padding: 10px;
     border-radius: 5px;
+    border: 2px solid gray;
     text-decoration: none;
 }
