@@ -7,14 +7,13 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import CartContext from '../../context/CartContext';
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import '../styles/CartWidget.css';
 
 
 
 export default function CartWidget() {
-
-  const { cartProducts, totalPrice } = useContext(CartContext)
+  const { cartProducts, totalPrice, totalCount, count } = useContext(CartContext)
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -24,7 +23,7 @@ export default function CartWidget() {
   const handleClose = () => {
     setAnchorEl(null);
   }; 
-  
+
   return (
     <React.Fragment>
       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center',}}>
@@ -87,7 +86,6 @@ export default function CartWidget() {
                       <div className='title'> {cartProduct.title} </div>
                       <div className='price'> $ {cartProduct.price} </div> 
                       <div className='qty'>  <b>{cartProduct.quantity}</b> </div> 
-                      {console.log(cartProduct.quantity)}
                       </MenuItem>
                       <Divider />
                     </div>
@@ -97,6 +95,7 @@ export default function CartWidget() {
                     Total: ${totalPrice()}
                     </MenuItem>
       </Menu>
+      { cartProducts.length > 0 && <p className='contadorWidget'>{count()}</p>}
     </React.Fragment>
   );
 }

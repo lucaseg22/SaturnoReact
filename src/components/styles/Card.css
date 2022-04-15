@@ -1,20 +1,20 @@
 .card {
-    height: 65vh;
+    height: 60vh;
     width: 20vw;
     box-sizing: border-box;
     box-shadow: 2px 2px 5px 0px black;
     border-radius: 25px;
-    background-color: rgba(16, 245, 138, 0.445);
+    background-color: rgba(247, 215, 173, 0.219);
     margin: 2rem;
     display: inline-block;
     flex-wrap: wrap;
-    min-width: 20vw;
-    min-height: 65vh;   
+    min-width: 18vw;
+    min-height: 60vh;   
 
 }
 
 .card:hover {
-    height: 66vh;
+    height: 60.5vh;
     width: 20.5vw;
     transition: 1s;
     box-shadow: 4px 5px 10px black;
@@ -66,8 +66,8 @@ div .counter {
 }
 
 button.continuar_compra.MuiButton-root {
-    background-color: orange;
-    box-shadow: 1px 1px 3px gray;
+    background-color: rgb(248, 175, 39);
+    box-shadow: 1px 1px 4px rgb(141, 141, 141);
     color: black;
     font-weight: 600;
     font-size: 16px;

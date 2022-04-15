@@ -1,6 +1,6 @@
 
-.navb {
-    background-color: rgb(226, 123, 158);
+div header.MuiPaper-root {
+    background-color: rgba(247, 215, 173, 0.219);
     height: 18vh;
 }
 

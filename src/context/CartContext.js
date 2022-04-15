@@ -16,6 +16,7 @@ const CartProvider = ({children}) => {
                         setCartProducts(cartProducts => [...cartProducts, product])
                     }
                     totalPrice()
+                    count()
                 }
         
         let total = 0
@@ -34,10 +35,20 @@ const CartProvider = ({children}) => {
             return total
         }
 
+        let totalCount = 0
+
+        const count = () => {
+            cartProducts.map((cartProduct) => {
+            totalCount += cartProduct.quantity
+        })
+        return (totalCount/2)
+    }
         const data = {
-            cartProducts, total, setCartProducts, addToCart, totalPrice, deleteProduct
+            cartProducts, total, setCartProducts, addToCart, totalPrice, deleteProduct, count, totalCount
         }
         
+
+
     return (
         <CartContext.Provider value={data} >
             {children}
