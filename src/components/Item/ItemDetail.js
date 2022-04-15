@@ -60,7 +60,7 @@ return (
                         
                         {visible && ( <div> 
                             <FinishBtn /> 
-                        <Button onClick={() => toggle()} >Continuar comprando</Button>
+                        <Button className='continue' onClick={() => toggle()} >Continuar comprando</Button>
                         </div>
                         
                                 )}

@@ -75,6 +75,22 @@ span.desc {
     display: block;
 }
 
+.continue.MuiButton-root {
+    background-color: rgb(142, 186, 223);
+    box-shadow: 1px 1px 4px rgb(141, 141, 141);
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid gray;
+}
+
+.continue.MuiButton-root:hover {
+    background-color: rgb(142, 186, 223);
+}
+
 
 
 
