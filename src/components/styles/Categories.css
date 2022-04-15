@@ -7,8 +7,8 @@
 .catContainer a img {
     border: 1px solid black;
     border-radius: 0;
-    height: 70vh;
-    width: 32vw;
+    height: 60vh;
+    width: 28vw;
     display: inline-block;
     text-decoration: none;
 }
