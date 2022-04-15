@@ -8,6 +8,7 @@ export default function ItemListContainer() {
     const [ products, setProducts ] = useState([])
     const [ loading, setLoading ] = useState(true)
 
+    
 
     useEffect(() => {
     getDetails().then((products) => {

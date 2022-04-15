@@ -1,9 +1,12 @@
-import { useState, useContext } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import Counter from './Counter'
 import FinishBtn from './FinishBtn'
 import CartContext from "../../context/CartContext";
 import { Button } from '@mui/material';
+import { doc, getDoc } from "firebase/firestore";
+import db from '../../firebase'
 import '../styles/ItemDetail.css'
+import { Navigate } from 'react-router-dom';
 
 
 export default function ItemDetail ({product}) {
@@ -11,6 +14,18 @@ const [ visible, setVisible ] = useState(false)
 const { cartProducts, addToCart } = useContext(CartContext)
 const { title, id, category, stock, img, price, details } = product
 
+const getProduct = async () => {
+    const docRef = doc(db, "products", id);
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+        console.log("Document data:", docSnap.data());
+        let product = docSnap.data()
+        product.id = docSnap.id
+    } else {
+        console.log("No such document!");
+        Navigate('/error')
+    }
+}
 
 function onAdd(quant) {
     console.log(quant)
@@ -22,6 +37,9 @@ const toggle = () => {
     setVisible(false)
 }
 
+useEffect (() =>{
+    getProduct()
+},[])
 return (
         <div className='product'>
             <div className='product__main'> 

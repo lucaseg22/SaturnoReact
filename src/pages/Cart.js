@@ -7,9 +7,16 @@ import { Button } from '@mui/material';
 import { Link } from 'react-router-dom'
 
 const Cart = () => {
-    const { cartProducts, total, totalPrice, deleteProduct } = useContext(CartContext)
+    const { cartProducts, setCartProducts, totalPrice, deleteProduct } = useContext(CartContext)
 
     totalPrice()
+
+    const clean = () => {
+        setCartProducts([])
+    }
+    const pay = () => {
+        alert('Herramienta en proceso')
+    }
 
     useEffect(() => {
         totalPrice()
@@ -45,11 +52,17 @@ const Cart = () => {
                             </div>
                         </div>)
                     })}
-                    <div className='totalPrice'>
-                        Total: $ <b>{totalPrice()}</b>
-                    </div>
+                {cartProducts != ''  && (
+                                        <div>
+                                            <div className='totalPrice'>
+                                                Total: $ <b>{totalPrice()}</b>
+                                            </div>
+                                            <p><Button onClick={pay} size="small">Pagar</Button></p>
+                                            <p><Button onClick={clean} size="small">Limpiar carrito</Button></p>
+                                        </div>
+                                        )}
             
-                </div>
+                </div>  
     )
 }
 export default Cart

@@ -23,7 +23,7 @@ useEffect(() => {
     getDetails().then((product) => {
         searchProductById(product, id)
         })
- } , [id]);
+} , [id]);
 
 return(
     <div>

@@ -1,6 +1,6 @@
 .counterbtnm {
     height: 3.5vh !important;
-    background-color:rgb(248, 175, 39) !important;
+    background-color: #fdbb75 !important;
     color: black!important;
     margin-left: .9rem !important;
     box-shadow: 2px 2px 3px black !important;
@@ -8,7 +8,7 @@
 
 .counterbtnme {
     height: 3.5vh !important;
-    background-color: rgb(248, 175, 39) !important;
+    background-color: #fdbb75 !important;
     color: black !important;
     margin-right: .9rem !important;
     box-shadow: 2px 2px 3px black !important;
@@ -19,7 +19,7 @@ Button.addCart {
     display: block;
     margin-top: .4rem;
     color: black !important;
-    background-color: rgb(248, 175, 39) !important;
+    background-color: #fdbb75 !important;
     box-shadow: 2px 2px 3px black;
 }
 

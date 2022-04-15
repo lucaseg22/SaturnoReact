@@ -10,7 +10,7 @@ import Cart from './pages/Cart'
 function App() {
 
   return (
-   
+  
 
     <div className="App">
       
@@ -24,7 +24,7 @@ function App() {
               <Route path="/:category" element={<Product />} />
               <Route path="/:category/:id" element={<ItemDetailContainer />} />
               <Route path="/carrito" element={<Cart />} />
-              <Route path='*' element={<h1>Not Found</h1>} />
+              <Route path='/error' element={<h1>Not Found</h1>} />
           </Routes>
         </BrowserRouter>
       </CartProvider>

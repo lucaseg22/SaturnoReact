@@ -7,7 +7,7 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import CartContext from '../../context/CartContext';
-import { useContext, useState, useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import '../styles/CartWidget.css';
 
 
@@ -23,6 +23,10 @@ export default function CartWidget() {
   const handleClose = () => {
     setAnchorEl(null);
   }; 
+
+  useEffect(() =>{
+    
+},[count()])
 
   return (
     <React.Fragment>
@@ -85,7 +89,7 @@ export default function CartWidget() {
                         <img className='cartProductImg' alt={cartProduct.title}  src={cartProduct.img} />
                       <div className='title'> {cartProduct.title} </div>
                       <div className='price'> $ {cartProduct.price} </div> 
-                      <div className='qty'>  <b>{cartProduct.quantity}</b> </div> 
+                      <div className='qty'>  <b>x {cartProduct.quantity}</b> </div> 
                       </MenuItem>
                       <Divider />
                     </div>
@@ -94,8 +98,8 @@ export default function CartWidget() {
                     <MenuItem>
                     Total: ${totalPrice()}
                     </MenuItem>
-      </Menu>
-      { cartProducts.length > 0 && <p className='contadorWidget'>{count()}</p>}
+      </Menu> 
+      { cartProducts.length > 0 && <p className='contadorWidget'>{totalCount}</p>}
     </React.Fragment>
   );
 }

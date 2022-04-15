@@ -16,14 +16,21 @@ button .MuiAvatar-root {
     border-radius: 25%;
 }
 
-.price {
+div.price {
     margin-left: 10px;
+    width: 1rem;
+}
+
+div.qty {
+    margin-left: 3rem;
+    width: 1rem;
+
 }
 
 .contadorWidget {
     color: black;
     font-weight: bold;
-    background-color: rgb(248, 175, 39);
+    background-color: #fdbb75;
     border-radius: 50%;
     width: 30px;
     height: 25px;
