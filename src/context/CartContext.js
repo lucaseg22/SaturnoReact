@@ -3,6 +3,7 @@ const CartContext = createContext()
 
 const CartProvider = ({children}) => {
     const [ cartProducts, setCartProducts ] = useState([])
+    const [ total, setTotal ] = useState(0)
     const [ totalCount, setTotalCount ] = useState(0)
                 const addToCart = (product) => {
                     const exists = cartProducts.find(cartProduct => cartProduct.id === product.id)
@@ -18,9 +19,6 @@ const CartProvider = ({children}) => {
                     totalPrice()
                     count()
                 }
-        
-        let total = 0
-
 
         const deleteProduct = (product) => {
             setCartProducts(cartProducts.filter( cartProduct => cartProduct.id !== product.id))
@@ -28,11 +26,10 @@ const CartProvider = ({children}) => {
 
         let totalPrice = () => {
             let total = 0
-            
             cartProducts.map((cartProduct) => {
                 total = (cartProduct.price*cartProduct.quantity) + total
             })
-            return total
+            return (setTotal(total))
         }
 
         

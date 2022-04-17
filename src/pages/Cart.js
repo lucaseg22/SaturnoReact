@@ -1,22 +1,56 @@
-import { useContext } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import CartContext from '../context/CartContext'
 import '../components/styles/Cart.css'
-import { useEffect } from 'react'
 import DeleteIcon from '@mui/icons-material/Delete';
 import { Button } from '@mui/material';
 import { Link } from 'react-router-dom'
+import Modal from '../components/Utilities/Modal'
+import db from '../firebase';
+import { addDoc, collection } from 'firebase/firestore'
 
 const Cart = () => {
-    const { cartProducts, setCartProducts, totalPrice, deleteProduct } = useContext(CartContext)
+    const { cartProducts, setCartProducts, totalPrice, deleteProduct, total } = useContext(CartContext)
+    const [ form, setForm ] = useState({
+        name:'',
+        phone:'',
+        email:''
+    })
+    const [ order, setOrder ] = useState(
+        {
+            buyer : form,
+            items: cartProducts.map((cartProduct) => {
+                return {
+                    id: cartProduct.id, 
+                    title: cartProduct.title,
+                    price: cartProduct.price
+                }
+            }),
+            total: total
+        }
+    )
 
-    totalPrice()
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        setOrder({
+            ...order,
+            buyer: form
+        })
+        sendOrder()
+        console.log(order)
+    }
+
+    const sendOrder = async () =>{
+        const orderFirebase = collection(db, 'orders')
+        const orderDoc = await addDoc(orderFirebase, order)
+        console.log('Order FB: ', orderDoc)
+    }
 
     const clean = () => {
         setCartProducts([])
     }
-    const pay = () => {
-        alert('Herramienta en proceso')
-    }
+
+    console.log('order', order)
+    console.log('form',form)
 
     useEffect(() => {
         totalPrice()
@@ -55,13 +89,12 @@ const Cart = () => {
                 {cartProducts != ''  && (
                                         <div>
                                             <div className='totalPrice'>
-                                                Total: $ <b>{totalPrice()}</b>
+                                                Total: $ <b>{total}</b>
                                             </div>
-                                            <p><Button className='pay' onClick={pay} size="small">Pagar</Button></p>
+                                            <p><Modal submit={handleSubmit} form={form} setForm={setForm} className='pay' /></p>
                                             <p><Button className='clean' onClick={clean} size="small">Limpiar carrito</Button></p>
                                         </div>
                                         )}
-            
                 </div>  
     )
 }

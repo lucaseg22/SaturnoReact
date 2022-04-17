@@ -13,7 +13,7 @@ import '../styles/CartWidget.css';
 
 
 export default function CartWidget() {
-  const { cartProducts, totalPrice, totalCount, count } = useContext(CartContext)
+  const { cartProducts, totalPrice, totalCount, total, count } = useContext(CartContext)
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -26,7 +26,7 @@ export default function CartWidget() {
 
   useEffect(() =>{
     
-},[count()])
+},[count(), totalPrice()])
 
   return (
     <React.Fragment>
@@ -96,7 +96,7 @@ export default function CartWidget() {
                     )
         })}
                     <MenuItem>
-                    Total: ${totalPrice()}
+                    Total: ${total}
                     </MenuItem>
       </Menu> 
       { cartProducts.length > 0 && <p className='contadorWidget'>{totalCount}</p>}
