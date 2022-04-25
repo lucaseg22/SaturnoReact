@@ -18,7 +18,6 @@ const getProduct = async () => {
     const docRef = doc(db, "products", id);
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
-        console.log("Document data:", docSnap.data());
         let product = docSnap.data()
         product.id = docSnap.id
     } else {
@@ -28,7 +27,6 @@ const getProduct = async () => {
 }
 
 function onAdd(quant) {
-    console.log(quant)
     setVisible(!visible)
     addToCart({...product, quantity: quant})
 }

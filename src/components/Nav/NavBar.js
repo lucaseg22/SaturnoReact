@@ -26,10 +26,9 @@ export default function NavBar() {
           <Typography className='titulo' variant="h4" component="div" sx={{ flexGrow: 1 }}>
             Saturno Ceramica
           </Typography>
-          <Button color='inherit' className='boton'><Link to='/'>Inicio </Link></Button>
-          <Button color='inherit' className='boton'><Link to='/categorias'>Productos</Link></Button>
+          <Button color='inherit' className='boton'><Link to='/productos'>Productos </Link></Button>
+          <Button color='inherit' className='boton'><Link to='/categorias'>Por categoria</Link></Button>
           <Button color='inherit' className='boton'><Link to='/'>Nosotros</Link></Button>
-          <Button color='inherit' className='boton'><Link to='/'>Contacto</Link></Button>
           <Button color='inherit' className='boton'><Link to='/carrito'>Carrito</Link></Button>
           <CartWidget />
         </Toolbar>

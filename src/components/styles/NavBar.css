@@ -2,6 +2,7 @@
 div header.MuiPaper-root {
     background-color: #e27070;
     height: 18vh;
+    width: 100%;
 }
 
 .titulo {
@@ -9,11 +10,11 @@ div header.MuiPaper-root {
     
 }
 
-.boton a {
-  color: black !important;
-  font-weight: bold !important;
-  margin-left:.5rem !important;
-  text-decoration: none !important;
+.boton.MuiButton-root a {
+  color: black;
+  font-weight: bold;
+  margin-left:.5rem;
+  text-decoration: none;
 }
 
 .logo { 

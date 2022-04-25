@@ -10,6 +10,7 @@ import { addDoc, collection } from 'firebase/firestore'
 
 const Cart = () => {
     const { cartProducts, setCartProducts, totalPrice, deleteProduct, total } = useContext(CartContext)
+    const [ orderId, setOrderId ] = useState('')
     const [ form, setForm ] = useState({
         name:'',
         phone:'',
@@ -36,28 +37,25 @@ const Cart = () => {
             buyer: form
         })
         sendOrder()
-        console.log(order)
     }
 
     const sendOrder = async () =>{
         const orderFirebase = collection(db, 'orders')
         const orderDoc = await addDoc(orderFirebase, order)
-        console.log('Order FB: ', orderDoc)
+        setCartProducts([])
+        setOrderId(orderDoc.id)
     }
 
     const clean = () => {
         setCartProducts([])
     }
 
-    console.log('order', order)
-    console.log('form',form)
-
     useEffect(() => {
         totalPrice()
-    },[cartProducts])
+    },[cartProducts, orderId])
 
     return (
-    
+
         <div>
             <div className='header_tags'>
                 <h3 className='prod'>Producto</h3>
@@ -66,7 +64,7 @@ const Cart = () => {
                 <h3 className='price'>Precio</h3>
                 <h3 className='delete'>Eliminar</h3>
             </div>
-            {cartProducts == '' && <Link className='agregar_mas' to='/'>Agregar productos</Link>}
+            {cartProducts == '' && <Link className='agregar_mas' to='/productos'>Agregar productos</Link>}
             {cartProducts.map((cartProduct) => {
                 return (<div className='products_section'  key={cartProduct.id}>
                             <div className='section product_section'>
@@ -95,6 +93,10 @@ const Cart = () => {
                                             <p><Button className='clean' onClick={clean} size="small">Limpiar carrito</Button></p>
                                         </div>
                                         )}
+                { orderId != '' && (
+                    <div className='orderContainer'>
+                        <p className='orderId'>¡Gracias por su compra! <br /> Su ID es: {orderId} </p>
+                    </div>)}
                 </div>  
     )
 }

@@ -1,5 +1,4 @@
 .card {
-    height: 60vh;
     width: 20vw;
     box-sizing: border-box;
     box-shadow: 2px 2px 5px 0px black;
@@ -9,21 +8,15 @@
     display: inline-block;
     flex-wrap: wrap;
     min-width: 18vw;
-    min-height: 60vh;   
-
+    min-height: 60vh;
+    padding: 1rem;
 }
 
 .card:hover {
-    height: 60.5vh;
-    width: 20.5vw;
-    transition: 1s;
-    box-shadow: 4px 5px 10px black;
+    transition: .5s;
+    box-shadow: 0px 0px 40px rgb(197, 73, 88);
 }
-.card:hover img {
-    height: 10.5rem;
-    width: 10.5rem;
-    transition: 1s;
-}
+
 
 .titulo {
     font-size:x-large;
@@ -66,11 +59,11 @@ div .counter {
 }
 
 button.continuar_compra.MuiButton-root {
-    background-color: #91f1db;
+    background-color: rgb(142, 186, 223);
     box-shadow: 1px 1px 4px rgb(141, 141, 141);
     color: black;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 12px;
     padding: 10px;
     border-radius: 5px;
     border: 2px solid gray;

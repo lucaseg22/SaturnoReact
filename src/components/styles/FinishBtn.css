@@ -1,9 +1,9 @@
-.finish a {
-    background-color: rgb(112, 189, 112) !important;
+.finish.MuiButton-root a {
+    background-color: rgb(112, 189, 112);
     box-shadow: 1px 1px 4px rgb(141, 141, 141);
     color: black;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 12px;
     padding: 10px;
     border-radius: 5px;
     text-decoration: none;
